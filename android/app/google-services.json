@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "1083581665693",
+    "firebase_url": "https://cupertinoflutter-default-rtdb.firebaseio.com",
+    "project_id": "cupertinoflutter",
+    "storage_bucket": "cupertinoflutter.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1083581665693:android:a6946622daa7d8818e9f74",
+        "android_client_info": {
+          "package_name": "com.example.cupertione_flutter"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1083581665693-agji8merm9qaa88retq2lp9kn8f3a63i.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCtLBEfXo1SMXn9qNo1Ms9b_BZJlG4R9FA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1083581665693-agji8merm9qaa88retq2lp9kn8f3a63i.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
