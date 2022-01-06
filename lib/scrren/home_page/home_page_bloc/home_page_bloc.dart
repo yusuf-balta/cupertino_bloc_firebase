@@ -4,12 +4,10 @@ import 'package:cupertione_flutter/scrren/home_page/home_page_bloc/home_page_sta
 import 'package:cupertione_flutter/scrren/home_page/home_page_service/home_page_service.dart';
 import 'package:cupertione_flutter/scrren/login_page/login_page.dart';
 import 'package:cupertione_flutter/scrren/login_page/login_page_service/login_page_service.dart';
-import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class HomePageBloc extends Bloc<HomePageEvent, HomePageState> {
   HomePageService homePageService = HomePageService();
-
   HomePageBloc() : super(InitialHomePageState()) {
     on(homePageEventControl);
   }
@@ -18,11 +16,11 @@ class HomePageBloc extends Bloc<HomePageEvent, HomePageState> {
     if (event is InitialHomePageEvent) {
       late PersonModel personModel;
       try {
-        final Stream result = await homePageService.getStream();
-        result.forEach((element) {
-          final res = element as DatabaseEvent;
-          print(res.snapshot.value);
-        });
+        final result = await homePageService.get();
+        personModel =
+            PersonModel.fromMap(result.snapshot.value as Map<dynamic, dynamic>);
+        print(personModel);
+        emit(SuccsesHomePageState(personModel: personModel));
       } catch (e) {
         print(e);
       }
